@@ -7,9 +7,9 @@ import ViewChangerComponent from './ViewChangerComponent'
 function HomeComponent() {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid bg-light">
                 <div className="row">
-                    <div className="col-12 col-md-2 bg-warning justify-content-center align-items-center p-5">
+                    <div className="col-12 col-md-2">
                         <LeftNavComponent></LeftNavComponent>
                     </div>
                     <div className="col-12 col-md">
@@ -20,7 +20,7 @@ function HomeComponent() {
                             <div className="col-12 col-md-7 bg-success p-5">
                                 <MapComponent />
                             </div>
-                            <div className="col-12 col-md-5 p-5">
+                            <div className="col-12 col-md-5">
                                 <ViewChangerComponent />
                             </div>
                         </div>
