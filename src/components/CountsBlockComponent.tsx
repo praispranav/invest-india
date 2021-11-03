@@ -7,8 +7,8 @@ function CountsBlockComponent() {
             boxTitle: "Startups",
             count: 10254,
             color: "white",
-            backgroundColor: "blue",
-            borderColor: "blue"
+            backgroundColor: "#0177FA",
+            borderColor: "#0177FA"
         },
         {
             _id: "2",
@@ -16,15 +16,15 @@ function CountsBlockComponent() {
             count: 1055,
             color: "black",
             backgroundColor: "white",
-            borderColor: "orange"
+            borderColor: "#ED8E00"
         },
         {
             _id: "3",
-            boxTitle: "Incubaror",
+            boxTitle: "Incubator",
             count: 2044,
             color: "black",
             backgroundColor: "white",
-            borderColor: "purple"
+            borderColor: "#0177FA"
         },
         {
             _id: "4",
@@ -32,7 +32,7 @@ function CountsBlockComponent() {
             count: 1055,
             color: "black",
             backgroundColor: "white",
-            borderColor: "yellow"
+            borderColor: "#BDAA00"
         },
         {
             _id: "5",
@@ -40,7 +40,7 @@ function CountsBlockComponent() {
             count: 454,
             color: "black",
             backgroundColor: "white",
-            borderColor: "red"
+            borderColor: "#CB3535"
         },
         {
             _id: "6",
@@ -48,7 +48,7 @@ function CountsBlockComponent() {
             count: 2376,
             color: "black",
             backgroundColor: "white",
-            borderColor: "green"
+            borderColor: "#00AD11"
         },
     ]
     const boxList = data.map((d1) => {
@@ -58,7 +58,9 @@ function CountsBlockComponent() {
                     backgroundColor: `${d1.backgroundColor}`,
                     border: `2px solid ${d1.borderColor}`,
                     color: `${d1.color}`,
-                    borderRadius: "7px"
+                    borderRadius: "4px",
+                    height: "98px",
+                    width: "170px"
                 }}>
                     <h4>{d1.count}</h4>
                     <h6>{d1.boxTitle}</h6>
