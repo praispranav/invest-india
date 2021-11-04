@@ -1,11 +1,83 @@
 import React from 'react'
+import '../scss/dataTableComponent.scss';
+import SearchBarComponent from '../shared-components/SearchBarComponent';
+import DataTable2Component from './DataTable2Component';
 
 function DataTableComponent(props: any) {
     if (props.data !== null) {
         return (
-            <div className="container p-5 bg-warning text-center">
-                <h1>DataTableComponent</h1>
-            </div>
+            <>
+                <div className="container-fluid m-0">
+                    <div className="row">
+                        <div className="col-12 col-md-7">
+                            <table style={{ overflowX: "scroll" }}>
+                                <thead>
+                                    <tr className="card d-flex flex-row border-dark my-3 p-1">
+                                        <th>States</th>
+                                        <th>Total Startups</th>
+                                        <th>FFS</th>
+                                        <th>Patient Startups</th>
+                                        <th>Seed Fund Startups</th>
+                                        <th>Showcased Startups</th>
+                                        <th>DDIIT Recognised Startups</th>
+                                        <th>Women Owned</th>
+                                    </tr>
+                                </thead>
+                                <div className="row mb-2">
+                                    <div className="col-12 col-md-5">
+                                        <SearchBarComponent />
+                                    </div>
+                                </div>
+                                <tbody>
+                                    <tr className="p-2 card d-flex flex-row my-2">
+                                        <td>Maharashtra</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                    </tr>
+                                    <tr className="p-2 card d-flex flex-row my-2">
+                                        <td>Maharashtra</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                    </tr>
+                                    <tr className="p-2 card d-flex flex-row my-2">
+                                        <td>Maharashtra</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                    </tr>
+                                    <tr className="p-2 card d-flex flex-row my-2">
+                                        <td>Maharashtra</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                        <td>12000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="col-12 col-md">
+                            <DataTable2Component />
+                        </div>
+                    </div>
+                </div>
+            </>
         )
     }
     else {

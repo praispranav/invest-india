@@ -1,9 +1,9 @@
 import React from 'react'
-
+import '../scss/headerComponent.scss';
 function HeaderComponent() {
     return (
         <>
-            <div className="mb-1 pt-3 pb-1 text-dark border-bottom" style={{ background: "#FFFFFF", boxShadow: "0px 4px 10px rgba(193, 193, 193, 0.25)" }}>
+            <div className="mb-1 pt-3 pb-1 text-dark border-bottom" style={{ height: "58px", background: "#FFFFFF", boxShadow: "0px 4px 10px rgba(193, 193, 193, 0.25)", fontFamily: '"Montserrat", sans-serif' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md">

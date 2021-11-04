@@ -6,7 +6,7 @@ import LeftNavComponent from './LeftNavComponent'
 import MapComponent from './MapComponent'
 import StartupsListComponent from './StartupsListComponent'
 import ViewChangerComponent from './ViewChangerComponent'
-
+import '../scss/homeComponent.scss';
 interface Iprops {
 
 }
@@ -24,7 +24,6 @@ class HomeComponent extends Component<Iprops, Istates>{
             dataTableData: null
         }
     }
-
     setStartUpData() {
         this.setState({ startupsListData: STARTUPLIST });
         this.setState({ dataTableData: null });
@@ -36,7 +35,7 @@ class HomeComponent extends Component<Iprops, Istates>{
     render() {
         return (
             <>
-                <div className="container-fluid bg-light  border-bottom">
+                <div className="container-fluid bg-light border-bottom">
                     <div className="row">
                         <div className="col-12 col-md-2 px-0 p-0">
                             <LeftNavComponent></LeftNavComponent>
@@ -58,13 +57,16 @@ class HomeComponent extends Component<Iprops, Istates>{
                     <div className="text-center row py-3 mx-0 mt-2" style={{
                         background: "#FFFFFF",
                         boxShadow: "0px 4px 10px rgba(193, 193, 193, 0.25)"
+
                     }}>
-                        <h6>The information is based on self declaration by community members. Startup India dosen't moderate the information collected.</h6>
+
+                        <h6><b>Please Note :</b> The information is based on self declaration by community members. Startup India dosen't moderate the information collected.</h6>
+
                     </div>
                     <div className="row my-3 text-center d-flex justify-content-center">
                         <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
-                            <button className="btn px-3 btn-primary" onClick={() => this.setStartUpData()}> Startups List</button>
-                            <button className="btn px-3 btn-primar" onClick={() => this.setDataTableData()}> Data Table</button>
+                            <button className="btn px-3 btn-primar" onClick={() => this.setStartUpData()}> Startups List</button>
+                            <button className="btn px-3 btn-primary" onClick={() => this.setDataTableData()}> Data Table</button>
                         </div>
                     </div>
                     <div className="row">

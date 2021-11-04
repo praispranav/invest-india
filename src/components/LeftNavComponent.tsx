@@ -1,11 +1,12 @@
 import React from 'react'
 import { GoSearch } from 'react-icons/go';
 import { RiArrowDropDownLine } from 'react-icons/ri';
+import '../scss/leftNavComponent.scss';
 
 function LeftNavComponent() {
     return (
-        <div className="container-fluid px-2">
-            <div className="row mt-2 shadow">
+        <div className="container-fluid px-2" >
+            <div className="row mt-2">
                 <div className="input-group rounded h-100 d-flex mx-0 px-0">
                     <span className="input-group-text border-0 m-0 " id="search-addon">
                         <GoSearch />
@@ -16,7 +17,7 @@ function LeftNavComponent() {
             </div>
             <div className="row my-3 px-2 py-0">
                 <div className="border-bottom-filter">
-                    <button className="btn d-flex w-100 mx-0" type="button" data-bs-toggle="collapse"
+                    <button className="btn d-flex w-100 mx-0 px-0 align-items-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                         <RiArrowDropDownLine className="me-2" size={32} />States
                         <span className="ms-auto">27</span>
@@ -28,7 +29,7 @@ function LeftNavComponent() {
                     </div>
                 </div>
                 <div className="border-bottom-filter ">
-                    <button className="btn d-flex w-100 mx-0" type="button" data-bs-toggle="collapse"
+                    <button className="btn d-flex w-100 mx-0 px-0 align-items-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                         <RiArrowDropDownLine className="me-2" size={32} />
                         Sector
@@ -41,7 +42,7 @@ function LeftNavComponent() {
                     </div>
                 </div>
                 <div className="border-bottom-filter">
-                    <button className="btn d-flex w-100 mx-0" type="button" data-bs-toggle="collapse"
+                    <button className="btn d-flex w-100 mx-0 px-0 align-items-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                         <RiArrowDropDownLine className="me-2" size={32} />
                         Industry
@@ -54,7 +55,7 @@ function LeftNavComponent() {
                     </div>
                 </div>
                 <div className="border-bottom-filter">
-                    <button className="btn d-flex w-100 mx-0" type="button" data-bs-toggle="collapse"
+                    <button className="btn d-flex w-100 mx-0 px-0 align-items-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                         <RiArrowDropDownLine className="me-2" size={32} />
                         Stage
@@ -67,7 +68,7 @@ function LeftNavComponent() {
                     </div>
                 </div>
                 <div className="border-bottom-filter">
-                    <button className="btn d-flex w-100 mx-0" type="button" data-bs-toggle="collapse"
+                    <button className="btn d-flex w-100 mx-0 px-0 align-items-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                         <RiArrowDropDownLine className="me-2" size={32} />
                         Winner Badges
@@ -80,12 +81,10 @@ function LeftNavComponent() {
                     </div>
                 </div>
             </div>
-            <div className="row card mt-4 pt-3 mx-0  pb-4">
-                <h5> VIEW STARTUP ECOSYSTEM INSIGHTS OF INDIA</h5>
-                <span className="text-center">You can View Insights of India</span>
-                <div className="w-100 text-center">
-                    <button className="btn btn-primary text-white">View Insights</button>
-                </div>
+            <div className="row card mt-4 pt-3 mx-0 pb-3 px-2">
+                <h6 className="px-0"> VIEW STARTUP ECOSYSTEM INSIGHTS OF INDIA</h6>
+                <span className="text-center sub-heading px-0">You can View Insights of India</span>
+                <button className="btn btn-primary p-2">View Insights</button>
             </div>
 
         </div >
