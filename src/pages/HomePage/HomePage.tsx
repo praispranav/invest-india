@@ -40,7 +40,7 @@ const HomePage = () => {
                 <div className="row text-center bg-white py-3 mx-0 my-2 strip" >
                     <h6><b>Please Note :</b> The information is based on self declaration by community members. Startup India dosen't moderate the information collected.</h6>
                 </div>
-                <div className="row my-3 text-center d-flex justify-content-center">
+                <div className="row my-3 d-flex justify-content-center">
                     <div className="btn-group text-center col-md-3 border p-1">
                         {/* <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
                             onClick={renderStartUpView}> Startups List</button>
