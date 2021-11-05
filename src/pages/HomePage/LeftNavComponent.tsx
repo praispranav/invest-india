@@ -1,9 +1,8 @@
-import React from 'react'
+import '../../scss/HomePageStyles/leftNavComponent.scss';
 import { GoSearch } from 'react-icons/go';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import '../../scss/HomePageStyles/leftNavComponent.scss';
 
-function LeftNavComponent() {
+const LeftNavComponent = () => {
     return (
         <>
             <div className="container-fluid px-2" >
@@ -88,7 +87,6 @@ function LeftNavComponent() {
                 <span className="text-center sub-heading px-0 mt-2">You can View Insights of India</span>
                 <button className="btn btn-primary p-2 mt-2">View Insights</button>
             </div>
-
         </>
     )
 }

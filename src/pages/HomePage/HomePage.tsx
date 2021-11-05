@@ -10,7 +10,10 @@ import { STARTUPLIST } from '../../shared-data/startuplist'
 import { DATATABLEDATA } from '../../shared-data/dataTable'
 
 const HomePage = () => {
+
     const [startupListActive, setStartupListActive] = useState(true);
+    const [startupsListData, setStartupsList] = useState(STARTUPLIST);
+    const [dataTableData, setDataTableList] = useState(DATATABLEDATA);
 
     const renderStartUpView = () => {
         setStartupListActive(true);
@@ -50,17 +53,14 @@ const HomePage = () => {
                 <div className="row my-3 text-center d-flex justify-content-center">
                     <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
                         <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
-                            onClick={() => renderStartUpView()}> Startups List</button>
+                            onClick={renderStartUpView}> Startups List</button>
                         <button className={startupListActive === false ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
-                            onClick={() => renderDataTableView()}> Data Table</button>
+                            onClick={renderDataTableView}> Data Table</button>
                     </div>
                 </div>
                 <div className="row">
-                    {
-                        startupListActive ?
-                            <StartupsListComponent data={STARTUPLIST} /> :
-                            <DataTableComponent data={DATATABLEDATA} />
-                    }
+                    {startupListActive && (<StartupsListComponent data={startupsListData} />)}
+                    {!startupListActive && (<DataTableComponent data={dataTableData} />)}
                 </div>
             </div>
         </>

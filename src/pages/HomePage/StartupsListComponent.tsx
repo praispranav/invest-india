@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import SearchBarComponent from '../../components/SearchBarComponent';
 import { Badge } from '../../styles-components/Badge';
@@ -51,7 +52,11 @@ function StartupsListComponent(props: any) {
     }
     else {
         return (
-            <></>
+            <>
+                <div className="container text-center p-5">
+                    <h1>Startup List is Empty</h1>
+                </div>
+            </>
         )
     }
 }

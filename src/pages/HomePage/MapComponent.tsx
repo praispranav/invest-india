@@ -1,9 +1,7 @@
-import React from 'react'
-
-function MapComponent() {
+const MapComponent = () => {
     return (
         <div>
-            <h2>MapComponent</h2>
+            <h1>Map Component</h1>
         </div>
     )
 }
