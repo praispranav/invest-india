@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/dataTable2Component.scss';
+import '../HomePageStyles/dataTable2Component.scss';
 
 function DataTable2Component() {
     return (
@@ -16,8 +16,6 @@ function DataTable2Component() {
                 </thead>
                 <div className="row mb-2">
                     <div className="col-12 col-md-5" style={{ padding: "1.19rem" }}>
-                        {/* <h1>  </h1> */}
-                        {/* <h1>  </h1> */}
                     </div>
                 </div>
                 <tbody>

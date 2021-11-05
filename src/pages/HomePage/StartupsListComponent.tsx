@@ -1,8 +1,8 @@
 import React from 'react'
-import SearchBarComponent from '../shared-components/SearchBarComponent';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { Badge } from '../styles-components/Badge';
-import './../scss/startupsListComponent.scss'
+import SearchBarComponent from '../../components/SearchBarComponent';
+import { Badge } from '../../styles-components/Badge';
+import '../HomePageStyles/startupsListComponent.scss';
 
 function StartupsListComponent(props: any) {
     console.log(props.data);

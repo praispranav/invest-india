@@ -1,7 +1,7 @@
 import React from 'react'
-import '../scss/dataTableComponent.scss';
-import SearchBarComponent from '../shared-components/SearchBarComponent';
+import SearchBarComponent from '../../components/SearchBarComponent';
 import DataTable2Component from './DataTable2Component';
+import '../HomePageStyles/dataTableComponent.scss';
 
 function DataTableComponent(props: any) {
     if (props.data !== null) {
