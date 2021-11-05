@@ -7,8 +7,8 @@ function DataTableComponent(props: any) {
     if (props.data.length !== 0) {
         return (
             <>
-                <div className="container-fluid m-0">
-                    <div className="row">
+                <div className=" m-0">
+                    <div className="row m-0 p-0">
                         <div className="col-12 col-md-7">
                             <table style={{ overflowX: "scroll" }}>
                                 <thead>
