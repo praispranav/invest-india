@@ -15,13 +15,7 @@ const HomePage = () => {
     const [startupsListData] = useState(STARTUPLIST);
     const [dataTableData] = useState(DATATABLEDATA);
 
-    const renderStartUpView = () => {
-        setStartupListActive(true);
-    }
-    const renderDataTableView = () => {
-        setStartupListActive(false);
-    }
-
+    const toggleStartUp = () => setStartupListActive(prevState => !prevState)
     return (
         <>
             <div className="container-fluid bg-light border-bottom">
@@ -48,15 +42,21 @@ const HomePage = () => {
                 </div>
                 <div className="row my-3 text-center d-flex justify-content-center">
                     <div className="btn-group text-center col-md-3 border p-1">
-                        <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
+                        {/* <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
                             onClick={renderStartUpView}> Startups List</button>
                         <button className={startupListActive === false ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
-                            onClick={renderDataTableView}> Data Table</button>
+                            onClick={renderDataTableView}> Data Table</button> */}
+                        <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
+                            <button className={`btn px-3 ${startupListActive && 'btn-primary text-white'}`}
+                                onClick={toggleStartUp}> Startups List</button>
+                            <button className={`btn px-3 ${!startupListActive && 'btn-primary text-white'}`}
+                                onClick={toggleStartUp}> Data Table</button>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    {startupListActive && (<StartupsListComponent data={startupsListData} />)}
-                    {!startupListActive && (<DataTableComponent data={dataTableData} />)}
+                    <div className="row">
+                        {startupListActive && (<StartupsListComponent data={startupsListData} />)}
+                        {!startupListActive && (<DataTableComponent data={dataTableData} />)}
+                    </div>
                 </div>
             </div>
         </>
