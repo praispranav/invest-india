@@ -12,7 +12,9 @@ interface Iprops {
 }
 interface Istates {
     startupsListData: any,
-    dataTableData: any
+    dataTableData: any,
+    blueButtonId: any,
+    greyButtonId: any
 }
 
 class HomeComponent extends Component<Iprops, Istates>{
@@ -21,16 +23,22 @@ class HomeComponent extends Component<Iprops, Istates>{
 
         this.state = {
             startupsListData: null,
-            dataTableData: null
+            dataTableData: null,
+            blueButtonId: 1,
+            greyButtonId: 0
         }
     }
     setStartUpData() {
         this.setState({ startupsListData: STARTUPLIST });
         this.setState({ dataTableData: null });
+        this.setState({ blueButtonId: 1 })
+        this.setState({ greyButtonId: 0 })
     }
     setDataTableData() {
         this.setState({ dataTableData: [{}] });
         this.setState({ startupsListData: null });
+        this.setState({ greyButtonId: 1 })
+        this.setState({ blueButtonId: 0 })
     }
     render() {
         return (
@@ -45,7 +53,7 @@ class HomeComponent extends Component<Iprops, Istates>{
                                 <CountsBlockComponent />
                             </div>
                             <div className="row">
-                                <div className="col-12 col-md-7 bg-success p-5">
+                                <div className="col-12 col-md-7 p-5">
                                     <MapComponent />
                                 </div>
                                 <div className="col-12 col-md-5">
@@ -59,14 +67,14 @@ class HomeComponent extends Component<Iprops, Istates>{
                         boxShadow: "0px 4px 10px rgba(193, 193, 193, 0.25)"
 
                     }}>
-
                         <h6><b>Please Note :</b> The information is based on self declaration by community members. Startup India dosen't moderate the information collected.</h6>
-
                     </div>
                     <div className="row my-3 text-center d-flex justify-content-center">
                         <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
-                            <button className="btn px-3 btn-primar" onClick={() => this.setStartUpData()}> Startups List</button>
-                            <button className="btn px-3 btn-primary" onClick={() => this.setDataTableData()}> Data Table</button>
+                            <button className={this.state.blueButtonId === 1 ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
+                                onClick={() => this.setStartUpData()}> Startups List</button>
+                            <button className={this.state.greyButtonId === 1 ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
+                                onClick={() => this.setDataTableData()}> Data Table</button>
                         </div>
                     </div>
                     <div className="row">

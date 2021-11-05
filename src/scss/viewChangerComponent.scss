@@ -1,5 +1,12 @@
-.h1-tag {
-    font-family: "Courier New", Courier, monospace;
+.container-fluid {
+    font-family: "Montserrat", sans-serif;
+}
+
+.data-range-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    width: 86px !important;
 }
 
 .select-type-card {
@@ -18,4 +25,14 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 20px rgba(1, 119, 250, 0.2);
     border-radius: 4px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700px !important;
+}
+
+.selected-startups {
+    font-size: 18px;
+    font-weight: 500 !important;
 }
