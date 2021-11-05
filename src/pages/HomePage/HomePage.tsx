@@ -12,8 +12,8 @@ import { DATATABLEDATA } from '../../shared-data/dataTable'
 const HomePage = () => {
 
     const [startupListActive, setStartupListActive] = useState(true);
-    const [startupsListData, setStartupsList] = useState(STARTUPLIST);
-    const [dataTableData, setDataTableList] = useState(DATATABLEDATA);
+    const [startupsListData] = useState(STARTUPLIST);
+    const [dataTableData] = useState(DATATABLEDATA);
 
     const renderStartUpView = () => {
         setStartupListActive(true);
@@ -43,15 +43,11 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-center row py-3 mx-0 mt-2" style={{
-                    background: "#FFFFFF",
-                    boxShadow: "0px 4px 10px rgba(193, 193, 193, 0.25)"
-
-                }}>
+                <div className="row text-center bg-white py-3 mx-0 my-2 strip" >
                     <h6><b>Please Note :</b> The information is based on self declaration by community members. Startup India dosen't moderate the information collected.</h6>
                 </div>
                 <div className="row my-3 text-center d-flex justify-content-center">
-                    <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
+                    <div className="btn-group text-center col-md-3 border p-1">
                         <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
                             onClick={renderStartUpView}> Startups List</button>
                         <button className={startupListActive === false ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
