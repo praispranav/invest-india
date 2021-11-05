@@ -1,31 +1,22 @@
+import { useState } from 'react';
 import CountsBlockComponent from './CountsBlockComponent'
 import DataTableComponent from './DataTableComponent'
 import LeftNavComponent from './LeftNavComponent'
 import MapComponent from './MapComponent'
 import StartupsListComponent from './StartupsListComponent'
 import ViewChangerComponent from './ViewChangerComponent'
-import { STARTUPLIST, startupType } from '../../shared-data/startuplist'
 import '../../scss/HomePageStyles/homeComponent.scss';
-import { useState } from 'react';
+import { STARTUPLIST } from '../../shared-data/startuplist'
+import { DATATABLEDATA } from '../../shared-data/dataTable'
 
 const HomePage = () => {
+    const [startupListActive, setStartupListActive] = useState(true);
 
-    const [startupsListData, setStartupsList] = useState<startupType[]>([]);
-    const [dataTableData, setDataTableList] = useState([]);
-    const [blueButtonId, setBlueColor] = useState(1);
-    const [greyButtonId, setGreyColor] = useState(0);
-
-    const setStartUpData = () => {
-        setStartupsList(STARTUPLIST);
-        setDataTableList([]);
-        setBlueColor(1);
-        setGreyColor(0);
+    const renderStartUpView = () => {
+        setStartupListActive(true);
     }
-    const setDataTableData = () => {
-        setDataTableList([]);
-        setStartupsList([]);
-        setBlueColor(0);
-        setGreyColor(1);
+    const renderDataTableView = () => {
+        setStartupListActive(false);
     }
 
     return (
@@ -58,15 +49,18 @@ const HomePage = () => {
                 </div>
                 <div className="row my-3 text-center d-flex justify-content-center">
                     <div className="btn-group text-center col-md-3 border" style={{ padding: "3px" }}>
-                        <button className={blueButtonId === 1 ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
-                            onClick={() => setStartUpData()}> Startups List</button>
-                        <button className={greyButtonId === 1 ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
-                            onClick={() => setDataTableData()}> Data Table</button>
+                        <button className={startupListActive === true ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
+                            onClick={() => renderStartUpView()}> Startups List</button>
+                        <button className={startupListActive === false ? 'btn-primary btn px-3 text-white' : 'btn px-3'}
+                            onClick={() => renderDataTableView()}> Data Table</button>
                     </div>
                 </div>
                 <div className="row">
-                    <StartupsListComponent data={startupsListData} />
-                    <DataTableComponent data={dataTableData} />
+                    {
+                        startupListActive ?
+                            <StartupsListComponent data={STARTUPLIST} /> :
+                            <DataTableComponent data={DATATABLEDATA} />
+                    }
                 </div>
             </div>
         </>

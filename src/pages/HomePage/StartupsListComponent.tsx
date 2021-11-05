@@ -1,11 +1,9 @@
-import React from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import SearchBarComponent from '../../components/SearchBarComponent';
 import { Badge } from '../../styles-components/Badge';
 import '../../scss/HomePageStyles/startupsListComponent.scss';
 
 function StartupsListComponent(props: any) {
-    console.log(props.data);
     if (props.data.length !== 0) {
         const startupList = props.data.map((d: any) => {
             return (

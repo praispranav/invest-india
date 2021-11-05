@@ -1,7 +1,6 @@
-import React from 'react'
 import '../../scss/HomePageStyles/dataTable2Component.scss';
 
-function DataTable2Component() {
+const DataTable2Component = () => {
     return (
         <>
             <table id="data-right-table">
@@ -50,8 +49,6 @@ function DataTable2Component() {
                 </tbody>
             </table>
         </>
-
     )
 }
-
 export default DataTable2Component

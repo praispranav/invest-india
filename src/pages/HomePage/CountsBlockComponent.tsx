@@ -1,8 +1,7 @@
-import React from 'react'
 import { COUNTBLOCK } from '../../shared-data/countBlockList';
 import '../../scss/HomePageStyles/countBlockComponent.scss';
 
-function CountsBlockComponent() {
+const CountsBlockComponent = () => {
     const data = COUNTBLOCK;
     const boxList = data.map((d1) => {
         return (
