@@ -6,11 +6,11 @@ import '../HomePageStyles/startupsListComponent.scss';
 
 function StartupsListComponent(props: any) {
     console.log(props.data);
-    if (props.data !== null) {
+    if (props.data.length !== 0) {
         const startupList = props.data.map((d: any) => {
             return (
                 <>
-                    <div className="col-12 col-md py-2 m-2 d-flex flex-row" style={{ backgroundColor: "#f1f1f1" }}>
+                    <div key={d._id} className="col-12 col-md py-2 m-2 d-flex flex-row" style={{ backgroundColor: "#f1f1f1" }}>
                         <div>
                             <img src={d.img_url} className="rounded-circle border" alt="main-logo" width="60px" height="60px" />
                         </div>

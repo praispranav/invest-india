@@ -1,6 +1,6 @@
 import React from 'react'
 import { COUNTBLOCK } from '../../shared-data/countBlockList';
-import '../HomePageStyles/countBlockComponent.scss';
+import '../../scss/HomePageStyles/countBlockComponent.scss';
 
 function CountsBlockComponent() {
     const data = COUNTBLOCK;

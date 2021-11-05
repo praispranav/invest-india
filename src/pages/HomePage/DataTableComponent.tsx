@@ -1,10 +1,10 @@
 import React from 'react'
 import SearchBarComponent from '../../components/SearchBarComponent';
 import DataTable2Component from './DataTable2Component';
-import '../HomePageStyles/dataTableComponent.scss';
+import '../../scss/HomePageStyles/dataTableComponent.scss';
 
 function DataTableComponent(props: any) {
-    if (props.data !== null) {
+    if (props.data.length !== 0) {
         return (
             <>
                 <div className="container-fluid m-0">

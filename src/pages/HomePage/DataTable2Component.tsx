@@ -1,5 +1,5 @@
 import React from 'react'
-import '../HomePageStyles/dataTable2Component.scss';
+import '../../scss/HomePageStyles/dataTable2Component.scss';
 
 function DataTable2Component() {
     return (

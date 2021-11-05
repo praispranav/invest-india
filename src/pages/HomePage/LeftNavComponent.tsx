@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoSearch } from 'react-icons/go';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import '../HomePageStyles/leftNavComponent.scss';
+import '../../scss/HomePageStyles/leftNavComponent.scss';
 
 function LeftNavComponent() {
     return (

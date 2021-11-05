@@ -2,7 +2,7 @@ import { Input } from 'reactstrap';
 import { IoMapSharp } from 'react-icons/io5';
 import { RiDropFill } from 'react-icons/ri';
 import { MdOutlineLocationCity } from 'react-icons/md';
-import '../HomePageStyles/viewChangerComponent.scss';
+import '../../scss/HomePageStyles/viewChangerComponent.scss';
 
 function ViewChangerComponent() {
     return (
