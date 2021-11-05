@@ -4,14 +4,14 @@ import LeftNavComponent from './LeftNavComponent'
 import MapComponent from './MapComponent'
 import StartupsListComponent from './StartupsListComponent'
 import ViewChangerComponent from './ViewChangerComponent'
-import { STARTUPLIST } from '../../shared-data/startuplist'
+import { STARTUPLIST, startupType } from '../../shared-data/startuplist'
 import '../../scss/HomePageStyles/homeComponent.scss';
 import { useState } from 'react';
 
 const HomePage = () => {
 
-    const [startupsListData, setStartupsList] = useState([{}]);
-    const [dataTableData, setDataTableList] = useState([{}]);
+    const [startupsListData, setStartupsList] = useState<startupType[]>([]);
+    const [dataTableData, setDataTableList] = useState([]);
     const [blueButtonId, setBlueColor] = useState(1);
     const [greyButtonId, setGreyColor] = useState(0);
 
@@ -22,7 +22,7 @@ const HomePage = () => {
         setGreyColor(0);
     }
     const setDataTableData = () => {
-        setDataTableList([{}]);
+        setDataTableList([]);
         setStartupsList([]);
         setBlueColor(0);
         setGreyColor(1);

@@ -1,4 +1,4 @@
-type startupType = {
+export type startupType = {
     _id: string,
     company: string,
     stage: string,
