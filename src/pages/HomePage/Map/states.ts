@@ -5,7 +5,7 @@ export interface MapType {
   strokeWidth?: string;
   fill?: string;
 }
-
+ 
 export const States: Array<MapType> = [
   {
     id: "ap",
