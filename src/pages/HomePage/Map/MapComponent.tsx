@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { States, MapType } from "./states";
-import _ from "lodash"
 
 const MAP_AREA = "0 0 650 696";
 const WHITE = "#ffffff";
@@ -27,9 +26,9 @@ export default function IndiaMap() {
     if (selected !== -1) return true
   };
 
-  const fillStates =(stateId:string) =>{
-    if(fillHover(stateId)) return THEME_COLOR_LITE
-    if(fillClick(stateId)) return THEME_COLOR
+  const fillStates = (stateId: string) => {
+    if (fillHover(stateId)) return THEME_COLOR_LITE
+    if (fillClick(stateId)) return THEME_COLOR
     return WHITE
   }
 
@@ -38,19 +37,20 @@ export default function IndiaMap() {
   };
   const handleStateMouseLeave = () => setHoverStates([]);
 
-  const handleStateClick = (state: MapType) =>{
-    const isSelected = stateValidator(activeStates,ID, state.id)
-    if(isSelected !== -1){
+  const handleStateClick = (state: MapType) => {
+    const isSelected = stateValidator(activeStates, ID, state.id)
+    if (isSelected !== -1) {
       const states = [...activeStates]
-      states.splice(isSelected,1)
+      states.splice(isSelected, 1)
       return setActiveStates(states)
-    }  
+    }
     setActiveStates((prevState: Array<MapType>) => [...prevState, state]);
   }
 
   useEffect(() => {
     setIndiaMap(States);
   }, []);
+
   return (
     <div className="m-2 mt-0">
       <svg
@@ -60,7 +60,7 @@ export default function IndiaMap() {
       >
         {indiaMap.map((state: MapType) => (
           <path
-            onMouseEnter={()=> handleMouseEnter(state)}
+            onMouseEnter={() => handleMouseEnter(state)}
             onMouseLeave={handleStateMouseLeave}
             onClick={(e) => handleStateClick(state)}
             key={state.id}
