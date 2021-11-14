@@ -1,10 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-
-// const Border = styled.div({
-//   height: '63px'
-// },
-// });
 
 interface HeaderType {
   children: React.ReactNode;
@@ -13,6 +7,9 @@ interface HeaderType {
   borderStyle?: string;
   borderRight?: boolean;
   borderLeft?: boolean;
+  background?: string;
+  borderHeight?: string;
+  fontWeight?: boolean;
 }
 
 const Header = ({
@@ -22,37 +19,32 @@ const Header = ({
   borderColor,
   borderRight,
   borderLeft,
+  background,
+  borderHeight,
+  fontWeight,
 }: HeaderType) => {
-  const borderWidthA = borderWidth ? borderWidth : "0.13rem";
+  const borderWidthA = borderWidth ? borderWidth : "0.14rem";
   const borderStyleA = borderStyle ? borderStyle : "solid";
   const borderColorA = borderColor ? borderColor : "black";
   const borderLeftA = `${borderWidthA} ${borderStyleA} ${borderColorA}`;
   return (
-    // <>
-    //   {children}
-    // </>
     <th
+      className="header-cell"
       style={{
-        width: "7.5%",
-        padding: "10px",
-        paddingLeft: "0px",
-        paddingRight: 0,
-        // height: "73px",
-        fontSize: "13px",
-        fontFamily: "Montserrat, sans-serif",
+        fontWeight: fontWeight ? 700 : 400,
+        background: background ? background : "none",
       }}
     >
-      <div className="d-flex" >
+      <div className="d-flex">
         <div
           style={{
-            height: "63px",
+            height: borderHeight ? borderHeight : "63px",
             borderLeft: borderLeftA,
           }}
         />
         <p className="my-0 p-0 mx-1 d-flex align-items-center">{children}</p>
       </div>
     </th>
-    
   );
 };
 
@@ -61,30 +53,350 @@ export default function DataTable(props: any) {
     <div className="w-100 data-table p-0 m-0">
       <table className="w-100">
         <thead className="w-100 py-5">
-          <tr className='card d-flex flex-row justify-content-between' style={{ background: "white"}}>
-            <Header borderLeft={true} borderWidth={"0px"}>
+          <tr
+            className="card d-flex flex-row justify-content-between"
+            style={{ background: "white" }}
+          >
+            <Header fontWeight={true}  borderLeft={true} borderWidth={"0px"}>
               States
             </Header>
-            <Header borderColor={"grey"} borderStyle={"solid"}>
+            <Header fontWeight={true}  borderColor={"#8a8a8a"} borderStyle={"solid"}>
               Total Startups
             </Header>
-            <Header borderStyle={"dashed"}>FFS</Header>
-            <Header borderStyle={"dashed"}>Patient Startups</Header>
-            <Header borderStyle={"dashed"}>Seed Fund Startups</Header>
-            <Header borderStyle={"dashed"}>Showcased Startups</Header>
-            <Header borderStyle={"dashed"}>DDIIT Recognised Startups</Header>
-            <Header borderStyle={"dashed"}>Women Owned</Header>
-            <Header borderStyle={"solid"}>Mentors</Header>
-            <Header borderColor={"grey"} borderStyle={"solid"}>
+            <Header fontWeight={true}  borderStyle={"dashed"}>FFS</Header>
+            <Header fontWeight={true}  borderStyle={"dashed"}>Patient Startups</Header>
+            <Header fontWeight={true}  borderStyle={"dashed"}>Seed Fund Startups</Header>
+            <Header fontWeight={true}  borderStyle={"dashed"}>Showcased Startups</Header>
+            <Header fontWeight={true}  borderStyle={"dashed"}>DDIIT Recognised Startups</Header>
+            <Header fontWeight={true}  borderStyle={"dashed"}>Women Owned</Header>
+            <Header fontWeight={true}  borderColor={"#8a8a8a"} borderStyle={"solid"}>
+              Mentors
+            </Header>
+            <Header fontWeight={true}  borderColor={"lightgrey"} borderStyle={"solid"}>
               Incubators
             </Header>
-            <Header borderStyle={"dashed"}>Investors</Header>
-            <Header borderStyle={"dashed"}>Accelerators</Header>
-            <Header borderStyle={"dashed"} borderRight={true}>
+            <Header fontWeight={true}  borderColor={"lightgrey"} borderStyle={"solid"}>
+              Investors
+            </Header>
+            <Header fontWeight={true}  borderColor={"lightgrey"} borderStyle={"solid"}>
+              Accelerators
+            </Header>
+            <Header
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+              borderRight={true}
+              fontWeight={true}
+            >
               Government
             </Header>
           </tr>
         </thead>
+        <tbody>
+          <tr className="d-flex bg-grey mt-2 flex-row justify-content-between">
+            <Header
+              fontWeight={true}
+              borderHeight="50px"
+              background="white"
+              borderLeft={true}
+              borderWidth={"0px"}
+            >
+              Maharashtra
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              background={"white"}
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+              background={"white"}
+            >
+              12000
+            </Header>
+          </tr>
+          <tr className="d-flex bg-grey mt-2 flex-row justify-content-between">
+            <Header
+              fontWeight={true}
+              borderHeight="50px"
+              background="white"
+              borderLeft={true}
+              borderWidth={"0px"}
+            >
+              Maharashtra
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              background={"white"}
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+              background={"white"}
+            >
+              12000
+            </Header>
+          </tr>
+          <tr className="d-flex bg-grey mt-2 flex-row justify-content-between">
+            <Header
+              borderHeight="50px"
+              background="white"
+              borderLeft={true}
+              borderWidth={"0px"}
+              fontWeight={true}
+            >
+              Maharashtra
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              background={"white"}
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+              background={"white"}
+            >
+              12000
+            </Header>
+          </tr>
+          <tr className="d-flex bg-grey mt-2 flex-row justify-content-between">
+            <Header
+              borderHeight="50px"
+              background="white"
+              borderLeft={true}
+              fontWeight={true}
+              borderWidth={"0px"}
+            >
+              Total
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header borderHeight="50px" borderStyle={"dashed"}>
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              background={"white"}
+              borderColor={"#8a8a8a"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              background={"white"}
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+            >
+              12000
+            </Header>
+            <Header
+              borderHeight="50px"
+              borderColor={"lightgrey"}
+              borderStyle={"solid"}
+              background={"white"}
+            >
+              12000
+            </Header>
+          </tr>
+        </tbody>
       </table>
       <div className="my-5"></div>
     </div>
