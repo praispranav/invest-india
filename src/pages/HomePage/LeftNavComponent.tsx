@@ -132,11 +132,11 @@ const LeftNavComponent = () => {
             </div>
           </div>
           <div className="left-nav-bottom-card row bg-white pt-3 ">
-            <h6 className="px-1 card-heading-left-bottom">
+            <h6 className="px-0 card-heading-left-bottom">
               {" "}
               VIEW STARTUP ECOSYSTEM INSIGHTS OF INDIA
             </h6>
-            <span className="text-center sub-heading px-0 mt-2">
+            <span className="sub-heading px-0 my-2 font-600">
               You can View Insights of India
             </span>
             <button className="btn shadow-none btn-primary mt-2 btn-view-project">

@@ -29,7 +29,7 @@ const HomePage = () => {
   const toggleStartUp = () => setStartupListActive((prevState) => !prevState);
   return (
     <>
-      <div className="bg-light border-bottom home-component-styles mx-0 px-0">
+      <div className="bg-wrapper border-bottom home-component-styles mx-0 px-0">
         <PageWrapperContainer>
           <PageWrapper>
             <div className="row px-0 mx-0">
@@ -69,16 +69,17 @@ const HomePage = () => {
             <div className="row d-flex justify-content-center px-0 mx-0">
               <div className="btn-group text-center col-md-3 border button-togglers">
                 <button
-                  className={`shadow-none btn btn-radius px-3 ${
+                  className={`font-500 shadow-none btn btn-radius px-3 ${
                     startupListActive && "btn-primary text-white"
                   }`}
                   onClick={toggleStartUp}
+                  
                 >
                   {" "}
                   Startups List
                 </button>
                 <button
-                  className={`shadow-none btn btn-radius-data-table px-3 ${
+                  className={`font-500 shadow-none btn btn-radius-data-table px-3 ${
                     !startupListActive && "btn-primary text-white"
                   }`}
                   onClick={toggleStartUp}
@@ -92,7 +93,7 @@ const HomePage = () => {
                   <StartupsListComponent data={startupsListData} />
                 )}
                 {!startupListActive && (
-                  <DataTableComponent  data={dataTableData} />
+                  <DataTable  data={dataTableData} />
                 )}
               </div>
             </div>
