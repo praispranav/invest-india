@@ -34,12 +34,11 @@ tr {
   border: 0px solid #8a8a8a;
 }
 
-thead{
+thead {
   tr:first-child {
     border-radius: 5px !important;
     border: 1px solid #8a8a8a;
   }
-
 }
 
 .bg-wrapper {
@@ -59,11 +58,11 @@ thead{
   font-weight: 400;
 }
 
-.border{
-  border: 1px solid rgba(0,0,0,0.2) !important;
+.border {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
 
-.header-cell{
+.header-cell {
   width: 7.69%;
   padding: 10px;
   padding-left: 0px;
@@ -72,14 +71,34 @@ thead{
   font-family: Montserrat, sans-serif;
 }
 
-.bg-grey{
-  background: #F1F1F1;
+.bg-grey {
+  background: #f1f1f1;
 }
 
-tbody{
-  tr{
-    td:first-child{
+tbody {
+  tr {
+    td:first-child {
       background: white;
     }
   }
+}
+
+.font-14px {
+  font-size: 14px !important;
+}
+
+.font-15px {
+  font-size: 15px;
+}
+
+.font-13px {
+  font-size: 13px;
+}
+
+.font-family-Mont {
+  font-family: "Montserrat";
+}
+
+.cdd {
+ 
 }

@@ -23,7 +23,7 @@ const Header = ({
   borderHeight,
   fontWeight,
 }: HeaderType) => {
-  const borderWidthA = borderWidth ? borderWidth : "0.14rem";
+  const borderWidthA = borderWidth ? borderWidth : "0.1rem";
   const borderStyleA = borderStyle ? borderStyle : "solid";
   const borderColorA = borderColor ? borderColor : "black";
   const borderLeftA = `${borderWidthA} ${borderStyleA} ${borderColorA}`;
@@ -42,7 +42,7 @@ const Header = ({
             borderLeft: borderLeftA,
           }}
         />
-        <p className="my-0 p-0 mx-1 d-flex align-items-center">{children}</p>
+        <p className="my-0 p-0 d-flex align-items-center" style={{marginLeft:'0.4rem'}}>{children}</p>
       </div>
     </th>
   );
@@ -60,7 +60,7 @@ export default function DataTable(props: any) {
             <Header fontWeight={true}  borderLeft={true} borderWidth={"0px"}>
               States
             </Header>
-            <Header fontWeight={true}  borderColor={"#8a8a8a"} borderStyle={"solid"}>
+            <Header fontWeight={true}  borderColor={"lightgrey"} borderStyle={"solid"}>
               Total Startups
             </Header>
             <Header fontWeight={true}  borderStyle={"dashed"}>FFS</Header>
@@ -104,7 +104,7 @@ export default function DataTable(props: any) {
             </Header>
             <Header
               borderHeight="50px"
-              borderColor={"#8a8a8a"}
+              borderColor={"lightgrey"}
               borderStyle={"solid"}
             >
               12000
@@ -180,7 +180,7 @@ export default function DataTable(props: any) {
             </Header>
             <Header
               borderHeight="50px"
-              borderColor={"#8a8a8a"}
+              borderColor={"lightgrey"}
               borderStyle={"solid"}
             >
               12000
@@ -256,7 +256,7 @@ export default function DataTable(props: any) {
             </Header>
             <Header
               borderHeight="50px"
-              borderColor={"#8a8a8a"}
+              borderColor={"lightgrey"}
               borderStyle={"solid"}
             >
               12000
@@ -332,7 +332,7 @@ export default function DataTable(props: any) {
             </Header>
             <Header
               borderHeight="50px"
-              borderColor={"#8a8a8a"}
+              borderColor={"lightgrey"}
               borderStyle={"solid"}
             >
               12000

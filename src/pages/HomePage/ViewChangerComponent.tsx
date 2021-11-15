@@ -67,8 +67,8 @@ function ViewChangerComponent() {
             </button>
           </div>
         </div> */}
-        <div className="mx-1 col-12">
-          <span className="data-range-text">Data Range</span>
+        <div className="mx-1 col-12 d-flex">
+          <p className="data-range-text w-50 m-0 p-0">Data Range</p>
           <Input
             id="dataRangeSelectBox"
             name="select"
@@ -82,29 +82,30 @@ function ViewChangerComponent() {
             <option> 4 </option>
             <option> 5 </option>
           </Input>
+          <div />
         </div>
-        <div className="mx-1 col-12" style={{ marginTop: '2.5rem'}}>
+        <div className="mx-1 col-12 mt-4" >
           <div className="d-flex justify-content-between">
             <div>
               <Tooltip placement="top" overlay={stateText}>
                 <button className="bg-primary shadow-none btn btn-outline btn-icon-handler text-white">
-                  <IoMapSharp size={18} />
+                  <IoMapSharp size={18} style={{ marginTop: '-3px' }} />
                 </button>
               </Tooltip>
               <Tooltip placement="top"  overlay={cityText}>
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                  <MdOutlineLocationCity size={18} />
+                  <MdOutlineLocationCity style={{ marginTop: '-3px' }}  size={18} />
                 </button>
               </Tooltip>
               <Tooltip placement="top" overlay={districtText}>
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                  <GiPeru size={19} />
+                  <GiPeru style={{ marginTop: '-3px' }} size={19} />
                 </button>
               </Tooltip>
             </div>
             <div>
               <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                <RiDropFill size={18} />
+                <RiDropFill size={18} style={{ marginTop: '-4px' }}  />
               </button>
             </div>
           </div>

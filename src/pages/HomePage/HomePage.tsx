@@ -46,12 +46,12 @@ const HomePage = () => {
                 <div className="col-12 row px-0 mx-0">
                   <div
                     className="col-12  p-5"
-                    style={{ flex: "0 0 auto", width: "62%" }}
+                    style={{ flex: "0 0 auto", width: "58%" }}
                   >
                     <MapComponent />
                   </div>
                   <div className="col-12 " style={{
-                      flex: "0 0 auto", width: "38%"
+                      flex: "0 0 auto", width: "42%"
                   }}>
                     <ViewChangerComponent />
                   </div>
@@ -69,17 +69,16 @@ const HomePage = () => {
             <div className="row d-flex justify-content-center px-0 mx-0">
               <div className="btn-group text-center col-md-3 border button-togglers">
                 <button
-                  className={`font-500 shadow-none btn btn-radius px-3 ${
+                  className={`font-500 font-14px font-family-Mont  shadow-none btn btn-radius px-3 ${
                     startupListActive && "btn-primary text-white"
                   }`}
                   onClick={toggleStartUp}
-                  
                 >
                   {" "}
                   Startups List
                 </button>
                 <button
-                  className={`font-500 shadow-none btn btn-radius-data-table px-3 ${
+                  className={`font-500 font-14px font-family-Mont  shadow-none btn btn-radius-data-table px-3 ${
                     !startupListActive && "btn-primary text-white"
                   }`}
                   onClick={toggleStartUp}
