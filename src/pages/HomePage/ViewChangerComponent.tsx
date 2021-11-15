@@ -92,7 +92,7 @@ function ViewChangerComponent() {
                 overlay={stateText}
               >
                 <button className="bg-primary shadow-none btn btn-outline btn-icon-handler text-white">
-                  <IoMapSharp size={20} style={{ marginTop: "-3px" }} />
+                  <IoMapSharp size={18} style={{ marginTop: "-7px",  marginLeft: '-1px' }} />
                 </button>
               </Tooltip>
               <Tooltip
@@ -102,8 +102,8 @@ function ViewChangerComponent() {
               >
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
                   <MdOutlineLocationCity
-                    style={{ marginTop: "-3px" }}
-                    size={20}
+                    style={{ marginTop: "-7px", marginLeft: '-1px' }}
+                    size={18}
                   />
                 </button>
               </Tooltip>
@@ -113,13 +113,13 @@ function ViewChangerComponent() {
                 overlay={districtText}
               >
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                  <GiPeru style={{ marginTop: "-3px" }} size={20} />
+                  <GiPeru style={{ marginTop: "-7px",  marginLeft: '-1px' }} size={18} />
                 </button>
               </Tooltip>
             </div>
             <div>
               <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                <RiDropFill size={18} style={{ marginTop: "-4px" }} />
+                <RiDropFill size={18} style={{ marginTop: "-7px", marginLeft: '-1px' }} />
               </button>
             </div>
           </div>

@@ -46,12 +46,12 @@ const HomePage = () => {
                 <div className="col-12 row px-0 mx-0">
                   <div
                     className="col-12  p-5"
-                    style={{ flex: "0 0 auto", width: "58%" }}
+                    style={{ flex: "0 0 auto", width: "61%" }}
                   >
                     <MapComponent />
                   </div>
                   <div className="col-12 " style={{
-                      flex: "0 0 auto", width: "42%"
+                      flex: "0 0 auto", width: "39%"
                   }}>
                     <ViewChangerComponent />
                   </div>
