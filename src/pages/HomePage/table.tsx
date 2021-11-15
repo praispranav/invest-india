@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBarComponent from "../../components/SearchBarComponent";
 
 interface HeaderType {
   children: React.ReactNode;
@@ -61,7 +62,7 @@ export default function DataTable(props: any) {
               States
             </Header>
             <Header fontWeight={true}  borderColor={"lightgrey"} borderStyle={"solid"}>
-              Total Startups
+              {'Total'}<br />Startups
             </Header>
             <Header fontWeight={true}  borderStyle={"dashed"}>FFS</Header>
             <Header fontWeight={true}  borderStyle={"dashed"}>Patient Startups</Header>
@@ -91,6 +92,9 @@ export default function DataTable(props: any) {
             </Header>
           </tr>
         </thead>
+        <div className="mt-3 mb-2" style={{ maxWidth: '22rem' }}>
+          <SearchBarComponent background="white" borderRadius="4px" placeholderClass="search-bar-placeholder-data-table" />
+        </div>
         <tbody>
           <tr className="d-flex bg-grey mt-2 flex-row justify-content-between">
             <Header

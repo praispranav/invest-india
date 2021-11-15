@@ -17,7 +17,7 @@ const LeftNavComponent = () => {
               </span>
               <input
                 type="search"
-                className="form-control ps-2 font-500"
+                className="form-control ps-2 search-bar-left"
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-addon"

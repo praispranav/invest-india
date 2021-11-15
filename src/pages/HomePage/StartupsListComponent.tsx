@@ -47,7 +47,7 @@ function StartUpCard({ _id, img_url, sector, company, location, stage }: any) {
 }
 
 function StartupsListComponent(props: any) {
-  const [screenWidth, setScreenWidth] = React.useState<number>(1150)
+  const [screenWidth, setScreenWidth] = React.useState<number>(0)
   if (!props.data.length) return <EmptyStartUp />;
 
   const startupList = props.data.map((startUp: any) => (
@@ -59,6 +59,7 @@ function StartupsListComponent(props: any) {
     setScreenWidth(windowWidth)
   }
   React.useEffect(()=>{
+    if(screenWidth === 0) setScreenWidth(window.innerWidth)
     window.addEventListener('resize', windowResize, false)
   },[screenWidth]) 
   return (
