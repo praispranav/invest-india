@@ -136,7 +136,7 @@ const LeftNavComponent = () => {
               {" "}
               VIEW STARTUP ECOSYSTEM INSIGHTS OF INDIA
             </h6>
-            <span className="sub-heading px-0 my-2 font-600">
+            <span className="sub-heading px-0 mb-2 font-500">
               You can View Insights of India
             </span>
             <button className="btn shadow-none btn-primary mt-2 btn-view-project">

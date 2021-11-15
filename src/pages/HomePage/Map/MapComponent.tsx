@@ -36,10 +36,10 @@ export default function IndiaMap() {
     return WHITE;
   };
 
-  const fillBorder = (stateId: string) => {
-    if (fillHover(stateId)) return THEME_COLOR;
-    if (fillClick(stateId)) return WHITE;
-    return BLACK;
+  const fillStroke = (stateId: string) => {
+    if (fillHover(stateId)) return 1.5;
+    if (fillClick(stateId)) return 1.7;
+    return 1;
   };
 
   const handleMouseEnter = (state: MapType, mouseEvent: any) => {
@@ -55,7 +55,7 @@ export default function IndiaMap() {
       states.splice(isSelected, 1);
       return setActiveStates(states);
     }
-    setActiveStates((prevState: Array<MapType>) => [...prevState, state]);
+    setActiveStates([state]);
   };
 
   useEffect(() => {
@@ -89,8 +89,8 @@ export default function IndiaMap() {
               d={state.d}
               id={state.id}
               fill={fillStates(state.id)}
-              stroke={fillBorder(state.id)}
-              strokeWidth="1"
+              stroke={BLACK}
+              strokeWidth={fillStroke(state.id)}
             />
           </Tooltip>
         ))}
