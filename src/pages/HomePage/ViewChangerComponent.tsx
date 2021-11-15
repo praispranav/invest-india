@@ -9,17 +9,17 @@ import "rc-tooltip/assets/bootstrap_white.css";
 
 function ViewChangerComponent() {
   const stateText = (
-    <div className="border-primary px-3">
+    <div className=" px-3">
       <span>State</span>
     </div>
   );
   const districtText = (
-    <div className="border-primary px-3">
+    <div className=" px-3">
       <span>District</span>
     </div>
   );
   const cityText = (
-    <div className="border-primary px-3">
+    <div className=" px-3">
       <span>City</span>
     </div>
   );
@@ -68,7 +68,7 @@ function ViewChangerComponent() {
           </div>
         </div> */}
         <div className="mx-1 col-12 d-flex">
-          <p className="data-range-text w-50 m-0 p-0">Data Range</p>
+          <p className="data-range-text w-50 m-0 p-0">Date Range</p>
           <Input
             id="dataRangeSelectBox"
             name="select"
@@ -77,35 +77,49 @@ function ViewChangerComponent() {
             style={{ border: "2px solid #0177FA" }}
           >
             <option>Select </option>
-            <option> 2 </option>
-            <option> 3 </option>
-            <option> 4 </option>
-            <option> 5 </option>
+            <option> Last 3 Months </option>
+            <option> Last 6 Months </option>
+            <option> Last 9 Months </option>
           </Input>
           <div />
         </div>
-        <div className="mx-1 col-12 mt-4" >
+        <div className="mx-1 col-12 mt-4">
           <div className="d-flex justify-content-between">
             <div>
-              <Tooltip placement="top" overlay={stateText}>
+              <Tooltip
+                arrowContent={<div className="rc-tooltip-arrow-inner"></div>}
+                placement="top"
+                overlay={stateText}
+              >
                 <button className="bg-primary shadow-none btn btn-outline btn-icon-handler text-white">
-                  <IoMapSharp size={18} style={{ marginTop: '-3px' }} />
+                  <IoMapSharp size={20} style={{ marginTop: "-3px" }} />
                 </button>
               </Tooltip>
-              <Tooltip placement="top"  overlay={cityText}>
+              <Tooltip
+                arrowContent={<div className="rc-tooltip-arrow-inner"></div>}
+                placement="top"
+                overlay={cityText}
+              >
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                  <MdOutlineLocationCity style={{ marginTop: '-3px' }}  size={18} />
+                  <MdOutlineLocationCity
+                    style={{ marginTop: "-3px" }}
+                    size={20}
+                  />
                 </button>
               </Tooltip>
-              <Tooltip placement="top" overlay={districtText}>
+              <Tooltip
+                arrowContent={<div className="rc-tooltip-arrow-inner"></div>}
+                placement="top"
+                overlay={districtText}
+              >
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                  <GiPeru style={{ marginTop: '-3px' }} size={19} />
+                  <GiPeru style={{ marginTop: "-3px" }} size={20} />
                 </button>
               </Tooltip>
             </div>
             <div>
               <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
-                <RiDropFill size={18} style={{ marginTop: '-4px' }}  />
+                <RiDropFill size={18} style={{ marginTop: "-4px" }} />
               </button>
             </div>
           </div>
@@ -129,7 +143,6 @@ function ViewChangerComponent() {
               </Input>
             </div>
             <div className="card d-flex flex-row align-items-center px-3 py-3 my-0">
-                
               <h3 className="p-0 m-0">10254</h3>
               <span className="selected-startups">All Startups</span>
             </div>

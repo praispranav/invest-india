@@ -1,12 +1,12 @@
 .rc-tooltip {
   font-weight: 500;
   font-size: 14px !important;
-  background-color: #0177fa;
+  // background-color: #0177fa;
 }
 .rc-tooltip-arrow {
   bottom: -5px;
   margin-left: -6px;
-  border-width: 6px 6px 0;
+  border-width: 6px 0px 6px 6px;
   border-top-color: #0177fa !important;
 }
 .rc-tooltip-inner {
