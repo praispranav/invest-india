@@ -48,7 +48,7 @@ function StartUpCard({ _id, img_url, sector, company, location, stage }: any) {
 
 function StartupsListComponent(props: any) {
   const [screenWidth, setScreenWidth] = React.useState<number>(0)
-  if (!props.data.length) return <EmptyStartUp />;
+
 
   const startupList = props.data.map((startUp: any) => (
     <StartUpCard {...startUp} />
@@ -62,6 +62,7 @@ function StartupsListComponent(props: any) {
     if(screenWidth === 0) setScreenWidth(window.innerWidth)
     window.addEventListener('resize', windowResize, false)
   },[screenWidth]) 
+    if (!props.data.length) return <EmptyStartUp />;
   return (
     <div className="mb-5 startup-list-styles d-flex">
       <div style={{ minWidth:"0", maxWidth:"17%", width:extraSpacing +'px' }} />
