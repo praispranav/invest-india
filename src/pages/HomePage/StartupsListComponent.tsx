@@ -15,7 +15,7 @@ function EmptyStartUp() {
 function StartUpCard({ _id, img_url, sector, company, location, stage }: any) {
   return (
     <>
-      <div  className="mt-4  mb-0 d-flex flex-row start-up-card">
+      <div  className="mb-0 d-flex flex-row start-up-card" style={{ marginTop: "1.3rem" }}>
         <div>
           <img
             src={img_url}
@@ -68,7 +68,7 @@ function StartupsListComponent(props: any) {
       <div style={{ minWidth:"0", maxWidth:"17%", width:extraSpacing +'px' }} />
       <div style={{ maxWidth: "55%", minWidth:"764px" }} className="startup-list-card-container p-4">
         <h6 className="startup-heading p-0 m-0">STARTUPS</h6>
-        <div style={{ marginTop: "1rem" }}>
+        <div style={{ marginTop: "1rem", marginBottom: '0.2rem' }}>
           <SearchBarComponent />
         </div>
         {console.log(screenWidth)}
