@@ -9,17 +9,17 @@ import "rc-tooltip/assets/bootstrap_white.css";
 
 function ViewChangerComponent() {
   const stateText = (
-    <div className=" px-3">
+    <div className=" px-3"  style={{ paddingTop: '2px' }}>
       <span>State</span>
     </div>
   );
   const districtText = (
-    <div className=" px-3">
+    <div className=" px-3" style={{ paddingTop: '2px' }}>
       <span>District</span>
     </div>
   );
   const cityText = (
-    <div className=" px-3">
+    <div className=" px-3"  style={{ paddingTop: '2px' }}>
       <span>City</span>
     </div>
   );

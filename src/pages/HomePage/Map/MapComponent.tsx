@@ -80,7 +80,7 @@ export default function IndiaMap() {
         aria-label="Map of India"
       >
         {indiaMap.map((state: MapType) => (
-          <Tooltip placement="top" arrowContent={<div className="rc-tooltip-arrow-inner"></div>}  overlay={<p className="px-2">{state.accessor.name}</p>}>
+          <Tooltip placement="top" arrowContent={<div className="rc-tooltip-arrow-inner"></div>}  overlay={<p style={{ paddingTop: '1px' }} className="px-2">{state.accessor.name}</p>}>
             <path
               onMouseEnter={(e) => handleMouseEnter(state, e)}
               onMouseLeave={handleStateMouseLeave}
