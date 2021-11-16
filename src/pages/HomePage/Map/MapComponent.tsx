@@ -73,14 +73,26 @@ export default function IndiaMap() {
   }, []);
 
   return (
-    <div className="m-2 mt-0">
+    <div className="m-2 mt-0" style={{ position: "relative" }}>
+      <div className="gradient-bar-map d-flex justify-content-between">
+        <p className="min-gradient-bar">0</p>
+        <p className="max-gradient-bar">2000</p>
+      </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox={MAP_AREA}
         aria-label="Map of India"
       >
         {indiaMap.map((state: MapType) => (
-          <Tooltip placement="top" arrowContent={<div className="rc-tooltip-arrow-inner"></div>}  overlay={<p style={{ paddingTop: '1px' }} className="px-2">{state.accessor.name}</p>}>
+          <Tooltip
+            placement="top"
+            arrowContent={<div className="rc-tooltip-arrow-inner"></div>}
+            overlay={
+              <p style={{ paddingTop: "1px" }} className="px-2">
+                {state.accessor.name}
+              </p>
+            }
+          >
             <path
               onMouseEnter={(e) => handleMouseEnter(state, e)}
               onMouseLeave={handleStateMouseLeave}
