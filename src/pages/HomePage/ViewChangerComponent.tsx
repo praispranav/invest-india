@@ -99,7 +99,7 @@ function ViewChangerComponent() {
                 <button className="bg-primary shadow-none btn btn-outline btn-icon-handler text-white">
                   <IoMapSharp
                     size={18}
-                    style={{ marginTop: "-6px", marginLeft: "0px" }}
+                    style={{ marginTop: "-5px", marginLeft: "-1px" }}
                   />
                 </button>
               </Tooltip>
@@ -110,7 +110,7 @@ function ViewChangerComponent() {
               >
                 <button className="bg-white text-dark shadow-none btn btn-icon-handler border-primary">
                   <MdOutlineLocationCity
-                    style={{ marginTop: "-7px", marginLeft: "-1px" }}
+                    style={{ marginTop: "-5px", marginLeft: "1px" }}
                     size={18}
                   />
                 </button>
