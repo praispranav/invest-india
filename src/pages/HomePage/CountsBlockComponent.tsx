@@ -8,7 +8,7 @@ const CountsBlockComponent = () => {
       <>
         <div
           key={d1._id}
-          className="col-5 col-md count-single-card"
+          className="col-5 col-md count-single-card p-0"
           style={{
             backgroundColor: `${d1.backgroundColor}`,
             border: `2px solid ${d1.borderColor}`,
@@ -19,9 +19,9 @@ const CountsBlockComponent = () => {
             width: "170px",
           }}
         >
-          <div className=" d-flex flex-column justify-content-evenly h-100 ms-1">
+          <div className=" d-flex flex-column h-100 p-3 justify-content-between">
             <h4 className="m-0 p-0">{d1.count}</h4>
-            <h6 className="mx-0 mb-0 p-0" style={{ marginTop: "-6px" }}>
+            <h6 className="mx-0 mb-0 p-0">
               {d1.boxTitle}
             </h6>
           </div>
